@@ -1,0 +1,8 @@
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\bin\Debug\SourceCode.exe.config
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\bin\Debug\SourceCode.exe
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\bin\Debug\SourceCode.pdb
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\obj\Debug\SourceCode.csprojAssemblyReference.cache
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\obj\Debug\SourceCode.Properties.Resources.resources
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\obj\Debug\SourceCode.csproj.GenerateResource.cache
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\obj\Debug\SourceCode.exe
+C:\Users\Carlos\Desktop\Parcial2POO\CMPP_00202118_2EP\SourceCode\obj\Debug\SourceCode.pdb
