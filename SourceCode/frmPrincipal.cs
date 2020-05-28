@@ -43,6 +43,28 @@ namespace SourceCode
             
             dvgUsuarios.DataSource = null;
             dvgUsuarios.DataSource = lista;
+
+            List<Negocio> lista1 = NegocioD.getLista();
+            
+            cmbNegocioEliminar.DataSource = null;
+            cmbNegocioEliminar.ValueMember = "name";
+            cmbNegocioEliminar.DisplayMember = "name";
+            cmbNegocioEliminar.DataSource = lista1;
+            
+            List<Negocio> lista2 = NegocioD.getLista();
+            
+            cmbNegocio.DataSource = null;
+            cmbNegocio.ValueMember = "idbusiness";
+            cmbNegocio.DisplayMember = "name";
+            cmbNegocio.DataSource = lista2;
+            
+            List<Producto> lista3 =ProductoD.getLista();
+            
+            cmbProductoEliminar.DataSource = null;
+            cmbProductoEliminar.ValueMember = "idproduct";
+            cmbProductoEliminar.DisplayMember = "name";
+            cmbProductoEliminar.DataSource = lista3;
+            
         }
         
         private void frmPrincipal_FormClosing(object sender, FormClosingEventArgs e)
@@ -108,6 +130,81 @@ namespace SourceCode
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             actualizarControles();
+        }
+
+        private void btnAgregarNegocio_Click(object sender, EventArgs e)
+        {
+            Negocio u = new Negocio();
+            u.name = txtNegocio.Text;
+            u.description = rtbDescripcion.Text;
+            
+            try
+            {
+                NegocioD.nuevoNegocio(u);
+                
+                MessageBox.Show("Negocio agregado exitosamente", "Enhorabuena",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                actualizarControles();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminarNegocio_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar el negocio " + cmbNegocioEliminar.Text + "?", 
+                "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                NegocioD.eliminarNegocio(cmbNegocioEliminar.Text);
+                
+                MessageBox.Show("Usuario negocio exitosamente", 
+                    "Enhorabuena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+                actualizarControles();
+            }
+        }
+
+        private void btnAgregarProducto_Click(object sender, EventArgs e)
+        {
+            Producto u = new Producto();
+            u.idbusiness = Convert.ToInt32(cmbNegocio.Text);
+
+            u.name = txtProducto.Text;
+            
+            
+            try
+            {
+                ProductoD.nuevoProducto(u);
+                
+                MessageBox.Show("Negocio agregado exitosamente", "Enhorabuena",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                actualizarControles();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void btnEliminarProducto_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar el producto " + cmbProductoEliminar.Text + "?", 
+                "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                ProductoD.eliminarProducto(cmbProductoEliminar.Text);
+                
+                MessageBox.Show("Producto negocio exitosamente", 
+                    "Enhorabuena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+                actualizarControles();
+            }
+            
         }
     }
 }

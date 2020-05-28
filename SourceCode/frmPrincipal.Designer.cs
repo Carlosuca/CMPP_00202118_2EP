@@ -37,7 +37,6 @@ namespace SourceCode
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -48,9 +47,29 @@ namespace SourceCode
             this.btnCrearUsuario = new System.Windows.Forms.Button();
             this.btnEliminarUsuario = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtNegocio = new System.Windows.Forms.TextBox();
+            this.rtbDescripcion = new System.Windows.Forms.RichTextBox();
+            this.cmbNegocioEliminar = new System.Windows.Forms.ComboBox();
+            this.btnAgregarNegocio = new System.Windows.Forms.Button();
+            this.btnEliminarNegocio = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.cmbNegocio = new System.Windows.Forms.ComboBox();
+            this.txtProducto = new System.Windows.Forms.TextBox();
+            this.btnAgregarProducto = new System.Windows.Forms.Button();
+            this.cmbProductoEliminar = new System.Windows.Forms.ComboBox();
+            this.btnEliminarProducto = new System.Windows.Forms.Button();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabContenedor.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dvgUsuarios)).BeginInit();
+            this.tabPage4.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabContenedor
@@ -60,6 +79,7 @@ namespace SourceCode
             this.tabContenedor.Controls.Add(this.tabPage3);
             this.tabContenedor.Controls.Add(this.tabPage4);
             this.tabContenedor.Controls.Add(this.tabPage5);
+            this.tabContenedor.Controls.Add(this.tabPage6);
             this.tabContenedor.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabContenedor.Location = new System.Drawing.Point(0, 63);
             this.tabContenedor.Name = "tabContenedor";
@@ -106,18 +126,16 @@ namespace SourceCode
             this.tabPage3.Text = "Usuarios";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(514, 350);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Negocios";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.btnEliminarProducto);
+            this.tabPage5.Controls.Add(this.cmbProductoEliminar);
+            this.tabPage5.Controls.Add(this.btnAgregarProducto);
+            this.tabPage5.Controls.Add(this.txtProducto);
+            this.tabPage5.Controls.Add(this.cmbNegocio);
+            this.tabPage5.Controls.Add(this.label8);
+            this.tabPage5.Controls.Add(this.label7);
+            this.tabPage5.Controls.Add(this.label6);
             this.tabPage5.Location = new System.Drawing.Point(4, 24);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
@@ -207,6 +225,170 @@ namespace SourceCode
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.btnEliminarNegocio);
+            this.tabPage4.Controls.Add(this.btnAgregarNegocio);
+            this.tabPage4.Controls.Add(this.cmbNegocioEliminar);
+            this.tabPage4.Controls.Add(this.rtbDescripcion);
+            this.tabPage4.Controls.Add(this.txtNegocio);
+            this.tabPage4.Controls.Add(this.label5);
+            this.tabPage4.Controls.Add(this.label4);
+            this.tabPage4.Controls.Add(this.label3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(514, 350);
+            this.tabPage4.TabIndex = 5;
+            this.tabPage4.Text = "Negocios";
+            this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(20, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(139, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Nombre de negocio";
+            // 
+            // label4
+            // 
+            this.label4.Location = new System.Drawing.Point(20, 86);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(139, 21);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Descripcion";
+            // 
+            // label5
+            // 
+            this.label5.Location = new System.Drawing.Point(20, 196);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(139, 21);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "Negocio a Eliminar";
+            // 
+            // txtNegocio
+            // 
+            this.txtNegocio.Location = new System.Drawing.Point(165, 27);
+            this.txtNegocio.Name = "txtNegocio";
+            this.txtNegocio.Size = new System.Drawing.Size(189, 23);
+            this.txtNegocio.TabIndex = 3;
+            // 
+            // rtbDescripcion
+            // 
+            this.rtbDescripcion.Location = new System.Drawing.Point(165, 82);
+            this.rtbDescripcion.Name = "rtbDescripcion";
+            this.rtbDescripcion.Size = new System.Drawing.Size(188, 62);
+            this.rtbDescripcion.TabIndex = 4;
+            this.rtbDescripcion.Text = "";
+            // 
+            // cmbNegocioEliminar
+            // 
+            this.cmbNegocioEliminar.FormattingEnabled = true;
+            this.cmbNegocioEliminar.Location = new System.Drawing.Point(165, 193);
+            this.cmbNegocioEliminar.Name = "cmbNegocioEliminar";
+            this.cmbNegocioEliminar.Size = new System.Drawing.Size(187, 23);
+            this.cmbNegocioEliminar.TabIndex = 5;
+            // 
+            // btnAgregarNegocio
+            // 
+            this.btnAgregarNegocio.Location = new System.Drawing.Point(393, 103);
+            this.btnAgregarNegocio.Name = "btnAgregarNegocio";
+            this.btnAgregarNegocio.Size = new System.Drawing.Size(113, 41);
+            this.btnAgregarNegocio.TabIndex = 6;
+            this.btnAgregarNegocio.Text = "Agregar Negocio";
+            this.btnAgregarNegocio.UseVisualStyleBackColor = true;
+            this.btnAgregarNegocio.Click += new System.EventHandler(this.btnAgregarNegocio_Click);
+            // 
+            // btnEliminarNegocio
+            // 
+            this.btnEliminarNegocio.Location = new System.Drawing.Point(393, 192);
+            this.btnEliminarNegocio.Name = "btnEliminarNegocio";
+            this.btnEliminarNegocio.Size = new System.Drawing.Size(113, 23);
+            this.btnEliminarNegocio.TabIndex = 7;
+            this.btnEliminarNegocio.Text = "Eliminar Negocio";
+            this.btnEliminarNegocio.UseVisualStyleBackColor = true;
+            this.btnEliminarNegocio.Click += new System.EventHandler(this.btnEliminarNegocio_Click);
+            // 
+            // label6
+            // 
+            this.label6.Location = new System.Drawing.Point(26, 35);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(158, 31);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "Seleccione a que negocio agregara elproducto";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.Location = new System.Drawing.Point(26, 93);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(158, 31);
+            this.label7.TabIndex = 1;
+            this.label7.Text = "Nombre del producto";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.Location = new System.Drawing.Point(26, 234);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(158, 31);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Seleccione el producto a eliminar";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cmbNegocio
+            // 
+            this.cmbNegocio.FormattingEnabled = true;
+            this.cmbNegocio.Location = new System.Drawing.Point(190, 40);
+            this.cmbNegocio.Name = "cmbNegocio";
+            this.cmbNegocio.Size = new System.Drawing.Size(209, 23);
+            this.cmbNegocio.TabIndex = 3;
+            // 
+            // txtProducto
+            // 
+            this.txtProducto.Location = new System.Drawing.Point(190, 98);
+            this.txtProducto.Name = "txtProducto";
+            this.txtProducto.Size = new System.Drawing.Size(209, 23);
+            this.txtProducto.TabIndex = 4;
+            // 
+            // btnAgregarProducto
+            // 
+            this.btnAgregarProducto.Location = new System.Drawing.Point(217, 146);
+            this.btnAgregarProducto.Name = "btnAgregarProducto";
+            this.btnAgregarProducto.Size = new System.Drawing.Size(145, 31);
+            this.btnAgregarProducto.TabIndex = 5;
+            this.btnAgregarProducto.Text = "Agregar";
+            this.btnAgregarProducto.UseVisualStyleBackColor = true;
+            this.btnAgregarProducto.Click += new System.EventHandler(this.btnAgregarProducto_Click);
+            // 
+            // cmbProductoEliminar
+            // 
+            this.cmbProductoEliminar.FormattingEnabled = true;
+            this.cmbProductoEliminar.Location = new System.Drawing.Point(190, 239);
+            this.cmbProductoEliminar.Name = "cmbProductoEliminar";
+            this.cmbProductoEliminar.Size = new System.Drawing.Size(209, 23);
+            this.cmbProductoEliminar.TabIndex = 6;
+            // 
+            // btnEliminarProducto
+            // 
+            this.btnEliminarProducto.Location = new System.Drawing.Point(217, 281);
+            this.btnEliminarProducto.Name = "btnEliminarProducto";
+            this.btnEliminarProducto.Size = new System.Drawing.Size(145, 31);
+            this.btnEliminarProducto.TabIndex = 7;
+            this.btnEliminarProducto.Text = "Eliminar";
+            this.btnEliminarProducto.UseVisualStyleBackColor = true;
+            this.btnEliminarProducto.Click += new System.EventHandler(this.btnEliminarProducto_Click);
+            // 
+            // tabPage6
+            // 
+            this.tabPage6.Location = new System.Drawing.Point(4, 24);
+            this.tabPage6.Name = "tabPage6";
+            this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage6.Size = new System.Drawing.Size(514, 350);
+            this.tabPage6.TabIndex = 6;
+            this.tabPage6.Text = "Direccion";
+            this.tabPage6.UseVisualStyleBackColor = true;
+            // 
             // frmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -223,15 +405,15 @@ namespace SourceCode
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPrincipal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrincipal_FormClosed);
             this.tabContenedor.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage5.ResumeLayout(false);
+            this.tabPage5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dvgUsuarios)).EndInit();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.ResumeLayout(false);
-            //this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmPrincipal_FormClosing);
-            //this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmPrincipal_FormClosed);
         }
 
         #endregion
@@ -239,7 +421,6 @@ namespace SourceCode
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tabPage3;
         private System.Windows.Forms.Label lblBienvenido;
         private System.Windows.Forms.TabControl tabContenedor;
@@ -251,5 +432,23 @@ namespace SourceCode
         private System.Windows.Forms.ComboBox cmbUsuario;
         private System.Windows.Forms.DataGridView dvgUsuarios;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtNegocio;
+        private System.Windows.Forms.RichTextBox rtbDescripcion;
+        private System.Windows.Forms.ComboBox cmbNegocioEliminar;
+        private System.Windows.Forms.Button btnAgregarNegocio;
+        private System.Windows.Forms.Button btnEliminarNegocio;
+        private System.Windows.Forms.TabPage tabPage4;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ComboBox cmbNegocio;
+        private System.Windows.Forms.Button btnEliminarProducto;
+        private System.Windows.Forms.ComboBox cmbProductoEliminar;
+        private System.Windows.Forms.TextBox txtProducto;
+        private System.Windows.Forms.Button btnAgregarProducto;
+        private System.Windows.Forms.TabPage tabPage6;
     }
 }

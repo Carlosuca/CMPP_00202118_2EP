@@ -16,9 +16,13 @@
       <e p="frmPrincipal.cs" t="Include" />
       <e p="frmPrincipal.Designer.cs" t="Include" />
       <e p="frmPrincipal.resx" t="Include" />
+      <e p="Negocio.cs" t="Include" />
+      <e p="NegocioD.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
+      <e p="Producto.cs" t="Include" />
+      <e p="ProductoD.cs" t="Include" />
       <e p="Program.cs" t="Include" />
       <e p="Properties" t="Include">
         <e p="AssemblyInfo.cs" t="Include" />
