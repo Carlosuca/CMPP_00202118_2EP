@@ -4,9 +4,11 @@ namespace SourceCode
 {
     public partial class frmPrincipal : Form
     {
-        public frmPrincipal()
+        private Usuario  username;
+        public frmPrincipal(Usuario pUsuario)
         {
             InitializeComponent();
+            username = pUsuario;
         }
     }
 }
