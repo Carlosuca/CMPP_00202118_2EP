@@ -7,6 +7,8 @@
       <e p="App.config" t="Include" />
       <e p="bin" t="ExcludeRecursive" />
       <e p="Conexion.cs" t="Include" />
+      <e p="Direcciones.cs" t="Include" />
+      <e p="DireccionesD.cs" t="Include" />
       <e p="Form1.cs" t="Include" />
       <e p="Form1.Designer.cs" t="Include" />
       <e p="Form1.resx" t="Include" />
@@ -19,6 +21,8 @@
       <e p="Negocio.cs" t="Include" />
       <e p="NegocioD.cs" t="Include" />
       <e p="obj" t="ExcludeRecursive" />
+      <e p="Orden.cs" t="Include" />
+      <e p="OrdenD.cs" t="Include" />
       <e p="packages" t="ExcludeRecursive" />
       <e p="packages.config" t="Include" />
       <e p="Producto.cs" t="Include" />

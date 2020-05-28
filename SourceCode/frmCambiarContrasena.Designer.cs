@@ -68,7 +68,7 @@ namespace SourceCode
             // label3
             // 
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(208, 146);
+            this.label3.Location = new System.Drawing.Point(208, 147);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(127, 22);
             this.label3.TabIndex = 2;
@@ -78,6 +78,7 @@ namespace SourceCode
             // 
             this.txtActual.Location = new System.Drawing.Point(341, 68);
             this.txtActual.Name = "txtActual";
+            this.txtActual.PasswordChar = '*';
             this.txtActual.Size = new System.Drawing.Size(137, 23);
             this.txtActual.TabIndex = 3;
             // 
@@ -85,6 +86,7 @@ namespace SourceCode
             // 
             this.txtNueva.Location = new System.Drawing.Point(341, 105);
             this.txtNueva.Name = "txtNueva";
+            this.txtNueva.PasswordChar = '*';
             this.txtNueva.Size = new System.Drawing.Size(137, 23);
             this.txtNueva.TabIndex = 4;
             // 
@@ -100,9 +102,9 @@ namespace SourceCode
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image) (resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(11, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(10, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(168, 169);
+            this.pictureBox1.Size = new System.Drawing.Size(168, 168);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
@@ -120,6 +122,7 @@ namespace SourceCode
             // 
             this.txtRepetir.Location = new System.Drawing.Point(341, 143);
             this.txtRepetir.Name = "txtRepetir";
+            this.txtRepetir.PasswordChar = '*';
             this.txtRepetir.Size = new System.Drawing.Size(137, 23);
             this.txtRepetir.TabIndex = 8;
             // 
@@ -127,7 +130,7 @@ namespace SourceCode
             // 
             this.btnCambiarContrasena.Location = new System.Drawing.Point(204, 209);
             this.btnCambiarContrasena.Name = "btnCambiarContrasena";
-            this.btnCambiarContrasena.Size = new System.Drawing.Size(130, 27);
+            this.btnCambiarContrasena.Size = new System.Drawing.Size(129, 27);
             this.btnCambiarContrasena.TabIndex = 9;
             this.btnCambiarContrasena.Text = "Confirmar";
             this.btnCambiarContrasena.UseVisualStyleBackColor = true;
@@ -137,7 +140,7 @@ namespace SourceCode
             // 
             this.btnCancelar.Location = new System.Drawing.Point(348, 209);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(130, 27);
+            this.btnCancelar.Size = new System.Drawing.Size(129, 27);
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;

@@ -17,11 +17,16 @@ namespace SourceCode
         {
             lblBienvenido.Text = 
                 "Bienvenido " + username.username + " [" + (username.usertype ? "Administrador" : "Usuario") + "]";
+                
 
             if (username.usertype)
             {
+                
                 actualizarControles();
+                
+
                 tabContenedor.TabPages[0].Parent = null;
+                tabContenedor.TabPages[5].Parent = null;
             }
             else
             {
@@ -64,6 +69,13 @@ namespace SourceCode
             cmbProductoEliminar.ValueMember = "idproduct";
             cmbProductoEliminar.DisplayMember = "name";
             cmbProductoEliminar.DataSource = lista3;
+            
+            List<Direcciones> lista4 =DireccionesD.getLista();
+            
+            cmbDireccion.DataSource = null;
+            cmbDireccion.ValueMember = "idaddress";
+            cmbDireccion.DisplayMember = "address";
+            cmbDireccion.DataSource = lista4;
             
         }
         
@@ -171,16 +183,13 @@ namespace SourceCode
         private void btnAgregarProducto_Click(object sender, EventArgs e)
         {
             Producto u = new Producto();
-            u.idbusiness = Convert.ToInt32(cmbNegocio.Text);
-
             u.name = txtProducto.Text;
-            
             
             try
             {
                 ProductoD.nuevoProducto(u);
                 
-                MessageBox.Show("Negocio agregado exitosamente", "Enhorabuena",
+                MessageBox.Show("Producto agregado exitosamente", "Enhorabuena",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 actualizarControles();
@@ -199,12 +208,72 @@ namespace SourceCode
             {
                 ProductoD.eliminarProducto(cmbProductoEliminar.Text);
                 
-                MessageBox.Show("Producto negocio exitosamente", 
+                MessageBox.Show("Producto se elimino exitosamente", 
                     "Enhorabuena", MessageBoxButtons.OK, MessageBoxIcon.Information);
             
                 actualizarControles();
             }
             
         }
+
+        private void btnAgregarDireccion_Click(object sender, EventArgs e)
+        {
+            Direcciones u = new Direcciones();
+            u.address = txtDireccion.Text;
+            
+            try
+            {
+                DireccionesD.nuevoDireccion(u);
+                
+                MessageBox.Show("Direccion agregada exitosamente", "Enhorabuena",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                actualizarControles();
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        private void btnEliminarDireccion_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("¿Seguro que desea eliminar la direcion " + cmbDireccion.Text + "?", 
+                "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+            {
+                DireccionesD.eliminarDireccion(cmbDireccion.Text);
+                
+                MessageBox.Show("La direccion se elimino exitosamente", 
+                    "Enhorabuena", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            
+                actualizarControles();
+            }
+        }
+
+        private void btnPedido_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                 Producto i = (Producto) cmbProducto1.SelectedItem;
+                Direcciones u = (Direcciones) cmbDireccion1.SelectedItem;
+                
+                OrdenD.realizarOrden(u, i, dtpfecha.Value);
+                
+                MessageBox.Show("Orden agregada exitosamente", "Enhonabuena",
+                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+                
+            }
+            catch (Exception exception)
+            {
+                MessageBox.Show("Error: " + exception.Message, "Error",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+
+        
     }
 }

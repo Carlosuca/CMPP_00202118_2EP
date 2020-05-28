@@ -15,22 +15,22 @@ namespace SourceCode
             List<Producto> lista = new List<Producto>();
             foreach (DataRow fila in dt.Rows)
             {
-                Producto u = new Producto();
-                u.idproduct = Convert.ToInt32(fila[0].ToString());
-                u.idbusiness = Convert.ToInt32(fila[1].ToString());
-                u.name = fila[2].ToString();
+                Producto i = new Producto();
+                i.idproduct = Convert.ToInt32(fila[0].ToString());
+                i.idbusiness = Convert.ToInt32(fila[1].ToString());
+                i.name = fila[2].ToString();
     
-                lista.Add(u);
+                lista.Add(i);
             }
             return lista;
 
         }
-        public static void nuevoProducto(Producto u)
+        public static void nuevoProducto(Producto i)
         {
             string sql = String.Format(
-                "INSERT INTO PRODUCT(idproduct, idbusiness, name )" +
-                "values({0}, {1}, '{2}');",
-                u.idproduct, u.idbusiness, u.name);
+                "INSERT INTO PRODUCT( idbusiness, name)" +
+                "values( '{1}', '{0}');",
+                 i.idbusiness, i.name);
                 
             Conexion.realizarAccion(sql);
         }

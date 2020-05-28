@@ -65,11 +65,28 @@ namespace SourceCode
             this.cmbProductoEliminar = new System.Windows.Forms.ComboBox();
             this.btnEliminarProducto = new System.Windows.Forms.Button();
             this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtDireccion = new System.Windows.Forms.TextBox();
+            this.cmbDireccion = new System.Windows.Forms.ComboBox();
+            this.btnAgregarDireccion = new System.Windows.Forms.Button();
+            this.btnEliminarDireccion = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.cmbProducto1 = new System.Windows.Forms.ComboBox();
+            this.cmbDireccion1 = new System.Windows.Forms.ComboBox();
+            this.dtpfecha = new System.Windows.Forms.DateTimePicker();
+            this.dgvPedidos = new System.Windows.Forms.DataGridView();
+            this.btnPedido = new System.Windows.Forms.Button();
             this.tabContenedor.SuspendLayout();
+            this.tabPage1.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize) (this.dvgUsuarios)).BeginInit();
             this.tabPage4.SuspendLayout();
+            this.tabPage6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvPedidos)).BeginInit();
             this.SuspendLayout();
             // 
             // tabContenedor
@@ -90,6 +107,14 @@ namespace SourceCode
             // 
             // tabPage1
             // 
+            this.tabPage1.Controls.Add(this.btnPedido);
+            this.tabPage1.Controls.Add(this.dgvPedidos);
+            this.tabPage1.Controls.Add(this.dtpfecha);
+            this.tabPage1.Controls.Add(this.cmbDireccion1);
+            this.tabPage1.Controls.Add(this.cmbProducto1);
+            this.tabPage1.Controls.Add(this.label13);
+            this.tabPage1.Controls.Add(this.label12);
+            this.tabPage1.Controls.Add(this.label11);
             this.tabPage1.Location = new System.Drawing.Point(4, 24);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -381,6 +406,12 @@ namespace SourceCode
             // 
             // tabPage6
             // 
+            this.tabPage6.Controls.Add(this.btnEliminarDireccion);
+            this.tabPage6.Controls.Add(this.btnAgregarDireccion);
+            this.tabPage6.Controls.Add(this.cmbDireccion);
+            this.tabPage6.Controls.Add(this.txtDireccion);
+            this.tabPage6.Controls.Add(this.label10);
+            this.tabPage6.Controls.Add(this.label9);
             this.tabPage6.Location = new System.Drawing.Point(4, 24);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
@@ -388,6 +419,126 @@ namespace SourceCode
             this.tabPage6.TabIndex = 6;
             this.tabPage6.Text = "Direccion";
             this.tabPage6.UseVisualStyleBackColor = true;
+            // 
+            // label9
+            // 
+            this.label9.Location = new System.Drawing.Point(14, 34);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(158, 29);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Agregar Direccion";
+            // 
+            // label10
+            // 
+            this.label10.Location = new System.Drawing.Point(14, 164);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(158, 29);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Eliminar Direccion";
+            // 
+            // txtDireccion
+            // 
+            this.txtDireccion.Location = new System.Drawing.Point(178, 31);
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Size = new System.Drawing.Size(192, 23);
+            this.txtDireccion.TabIndex = 2;
+            // 
+            // cmbDireccion
+            // 
+            this.cmbDireccion.FormattingEnabled = true;
+            this.cmbDireccion.Location = new System.Drawing.Point(178, 161);
+            this.cmbDireccion.Name = "cmbDireccion";
+            this.cmbDireccion.Size = new System.Drawing.Size(192, 23);
+            this.cmbDireccion.TabIndex = 3;
+            // 
+            // btnAgregarDireccion
+            // 
+            this.btnAgregarDireccion.Location = new System.Drawing.Point(394, 25);
+            this.btnAgregarDireccion.Name = "btnAgregarDireccion";
+            this.btnAgregarDireccion.Size = new System.Drawing.Size(112, 33);
+            this.btnAgregarDireccion.TabIndex = 4;
+            this.btnAgregarDireccion.Text = "Agregar";
+            this.btnAgregarDireccion.UseVisualStyleBackColor = true;
+            this.btnAgregarDireccion.Click += new System.EventHandler(this.btnAgregarDireccion_Click);
+            // 
+            // btnEliminarDireccion
+            // 
+            this.btnEliminarDireccion.Location = new System.Drawing.Point(394, 155);
+            this.btnEliminarDireccion.Name = "btnEliminarDireccion";
+            this.btnEliminarDireccion.Size = new System.Drawing.Size(112, 33);
+            this.btnEliminarDireccion.TabIndex = 5;
+            this.btnEliminarDireccion.Text = "Eliminar";
+            this.btnEliminarDireccion.UseVisualStyleBackColor = true;
+            this.btnEliminarDireccion.Click += new System.EventHandler(this.btnEliminarDireccion_Click);
+            // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(17, 33);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(120, 28);
+            this.label11.TabIndex = 0;
+            this.label11.Text = "Producto";
+            // 
+            // label12
+            // 
+            this.label12.Location = new System.Drawing.Point(17, 75);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(120, 28);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Direccion";
+            // 
+            // label13
+            // 
+            this.label13.Location = new System.Drawing.Point(17, 117);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(120, 28);
+            this.label13.TabIndex = 2;
+            this.label13.Text = "Fecha";
+            // 
+            // cmbProducto1
+            // 
+            this.cmbProducto1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbProducto1.FormattingEnabled = true;
+            this.cmbProducto1.Location = new System.Drawing.Point(143, 30);
+            this.cmbProducto1.Name = "cmbProducto1";
+            this.cmbProducto1.Size = new System.Drawing.Size(188, 23);
+            this.cmbProducto1.TabIndex = 3;
+            // 
+            // cmbDireccion1
+            // 
+            this.cmbDireccion1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbDireccion1.FormattingEnabled = true;
+            this.cmbDireccion1.Location = new System.Drawing.Point(143, 72);
+            this.cmbDireccion1.Name = "cmbDireccion1";
+            this.cmbDireccion1.Size = new System.Drawing.Size(188, 23);
+            this.cmbDireccion1.TabIndex = 4;
+            // 
+            // dtpfecha
+            // 
+            this.dtpfecha.Location = new System.Drawing.Point(143, 117);
+            this.dtpfecha.Name = "dtpfecha";
+            this.dtpfecha.Size = new System.Drawing.Size(187, 23);
+            this.dtpfecha.TabIndex = 5;
+            // 
+            // dgvPedidos
+            // 
+            this.dgvPedidos.ColumnHeadersHeightSizeMode =
+                System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPedidos.Location = new System.Drawing.Point(9, 175);
+            this.dgvPedidos.Name = "dgvPedidos";
+            this.dgvPedidos.Size = new System.Drawing.Size(493, 164);
+            this.dgvPedidos.TabIndex = 6;
+            
+            // 
+            // btnPedido
+            // 
+            this.btnPedido.Location = new System.Drawing.Point(384, 64);
+            this.btnPedido.Name = "btnPedido";
+            this.btnPedido.Size = new System.Drawing.Size(103, 53);
+            this.btnPedido.TabIndex = 7;
+            this.btnPedido.Text = "Realizar Orden";
+            this.btnPedido.UseVisualStyleBackColor = true;
+            this.btnPedido.Click += new System.EventHandler(this.btnPedido_Click);
             // 
             // frmPrincipal
             // 
@@ -406,6 +557,7 @@ namespace SourceCode
             this.Text = "frmPrincipal";
             this.Load += new System.EventHandler(this.frmPrincipal_Load);
             this.tabContenedor.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
             this.tabPage5.ResumeLayout(false);
@@ -413,6 +565,9 @@ namespace SourceCode
             ((System.ComponentModel.ISupportInitialize) (this.dvgUsuarios)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.tabPage6.ResumeLayout(false);
+            this.tabPage6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize) (this.dgvPedidos)).EndInit();
             this.ResumeLayout(false);
         }
 
@@ -450,5 +605,19 @@ namespace SourceCode
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Button btnAgregarProducto;
         private System.Windows.Forms.TabPage tabPage6;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtDireccion;
+        private System.Windows.Forms.ComboBox cmbDireccion;
+        private System.Windows.Forms.Button btnAgregarDireccion;
+        private System.Windows.Forms.Button btnEliminarDireccion;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.ComboBox cmbProducto1;
+        private System.Windows.Forms.ComboBox cmbDireccion1;
+        private System.Windows.Forms.Button btnPedido;
+        private System.Windows.Forms.DataGridView dgvPedidos;
+        private System.Windows.Forms.DateTimePicker dtpfecha;
     }
 }
