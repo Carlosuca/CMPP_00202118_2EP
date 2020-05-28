@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Security.Cryptography;
 
 namespace SourceCode
 {
@@ -35,9 +36,27 @@ namespace SourceCode
             
             Conexion.realizarAccion(sql);
         }//
-        
-        
         //UPDATE APPUSER SET password = 'nueva' WHERE idUser = 1
         //update APPUSER set password='{0}' where userid='{1}';
+        
+        public static void crearNuevo(string username)
+                {
+                    string sql = String.Format(
+                        "INSERT INTO APPUSER(fullname, username, password, userType)" +
+                        "values('{0}', '{1}', '{2}', false);",
+                        username, username,username);
+                    
+                    Conexion.realizarAccion(sql);
+                }
+        
+        public static void eliminar(string username)
+        {
+            string sql = String.Format(
+                "DELETE FROM APPUSER WHERE USERNAME = '{0}'", 
+                username);
+            
+            Conexion.realizarAccion(sql);
+        }
+
     }
 }
